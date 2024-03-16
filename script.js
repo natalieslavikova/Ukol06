@@ -24,11 +24,11 @@ const justFood = (people) => {
 }
 
 const yourMama = (people) => {
-    return `Catering od Your Mama je pro ${people} lidí za 200 000 Kč`;
+    return `Catering od Your Mama je pro ${people} lidí za 180 000 Kč`;
 }
 
 const flavourHaven = (people) => {
-    return `Catering od Flavour Haven je pro ${people} lidí za 200 000 Kč`;
+    return `Catering od Flavour Haven je pro ${people} lidí za 220 000 Kč`;
 }
 
 console.log(justFood(200));
@@ -37,8 +37,8 @@ console.log(flavourHaven(70));
 
 
 
-const createEvent = (event, people, catering) => {
-    return `Událost ${event} s cateringem od ${catering} je pro ${people} lidí za 200 000 Kč`;
+const createEvent = (event, people, cateringFunction) => {
+    return `Událost ${event} s ${cateringFunction(people)}`; // pro funckci cateringFunction jsem napsala argument 
 }
 
-console.log(createEvent("inaugurace prezidenta", 120, "Your Mama"));
+console.log(createEvent("Inaugurace prezidenta", 70, flavourHaven));
